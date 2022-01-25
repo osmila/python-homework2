@@ -1,16 +1,9 @@
-# This is a sample Python script.
+import car_days
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# Task 1:
+# За день машина проезжает n километров.
+# Сколько дней нужно, чтобы проехать маршрут длиной m километров?
+# Программа получает на вход числа n и m.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+days = car_days.calculateDays()
+car_days.print_result(days)
