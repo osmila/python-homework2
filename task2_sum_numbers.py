@@ -4,7 +4,7 @@ NUMBER_TEXT = 'Enter 3-digit number: '
 
 
 def sum_digits_from_number():
-    input_number = validate_input_console.validate_input_has_3_digits(NUMBER_TEXT)
+    input_number = validate_input_console.validate_input_has_n_digits(NUMBER_TEXT, 3)
     third_digit = (input_number % 100 % 10)
     second_digit = int(((input_number % 100) - third_digit) / 10)
     first_digit = int((input_number - second_digit * 10 - third_digit) / 100)
@@ -13,7 +13,7 @@ def sum_digits_from_number():
 
 
 def sum_digits_from_number_v2():
-    input_number = validate_input_console.validate_input_has_3_digits(NUMBER_TEXT)
+    input_number = validate_input_console.validate_input_has_n_digits(NUMBER_TEXT, 3)
     third_digit = (input_number % 10)
     second_digit = (input_number // 10) % 10
     first_digit = (input_number // 100)
@@ -22,7 +22,7 @@ def sum_digits_from_number_v2():
 
 
 def sum_from_recursive():
-    input_number = validate_input_console.validate_input_has_3_digits(NUMBER_TEXT)
+    input_number = validate_input_console.validate_input_has_n_digits(NUMBER_TEXT, 3)
     sum_digits = sum_recursive(input_number, 0)
     print(f'Sum of entered number digits = {sum_digits}')
 
