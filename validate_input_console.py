@@ -21,11 +21,17 @@ def validate_input_is_positive(input_text):
     return value
 
 
-def validate_input_has_3_digits(input_text):
+def validate_input_has_n_digits(input_text, digits):
+    min_value = 1
+    max_value = 9
+    for x in range(digits-1):
+        min_value = min_value * 10
+        max_value = min_value * 10 - 1
+
     while True:
         value = validate_input_is_positive(input_text)
-        if value < 100 or value > 999:
-            print('Entered value has to be 3-digit number. Please, try again.')
+        if value < min_value or value > max_value:
+            print(f'Entered value has to be {digits}-digit number. Please, try again.')
             continue
         else:
             break

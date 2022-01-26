@@ -1,6 +1,7 @@
 import task1_calc_days
 import task2_sum_numbers
 import task3_sort_list
+import task4_leap_year
 
 # Task 1:
 # За день машина проезжает n километров.
@@ -19,3 +20,8 @@ task2_sum_numbers.sum_from_recursive()
 # Найти максимальное число из трех. Числа вводится с клавиатуры
 
 task3_sort_list.print_max_value()
+
+# Task 4:
+# Определить високосный год или нет.Число вводится с клавиатуры
+
+task4_leap_year.check_leap_year()
