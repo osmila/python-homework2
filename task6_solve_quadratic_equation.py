@@ -11,8 +11,8 @@ class QuadraticEquation:
 
     def __init__(self):
         self.a = validate_input_console.validate_input_is_not_zero(A_TEXT)
-        self.b = validate_input_console.validate_input_is_number(B_TEXT)
-        self.c = validate_input_console.validate_input_is_number(C_TEXT)
+        self.b = validate_input_console.validate_input_is_float_number(B_TEXT)
+        self.c = validate_input_console.validate_input_is_float_number(C_TEXT)
         self.d = 0
         self.x1 = 0
         self.x2 = 0
@@ -33,6 +33,8 @@ class QuadraticEquation:
 
     def print_roots(self):
         self.calc_roots()
+        self.x1 = round(self.x1, 4)
+        self.x2 = round(self.x2, 4)
         if self.x1 == 0 and self.x2 == 0:
             print('There are no real roots: discriminant < 0')
         elif self.x1 == self.x2:

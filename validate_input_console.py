@@ -1,7 +1,7 @@
-def validate_input_is_number(input_text):
+def validate_input_is_float_number(input_text):
     while True:
         try:
-            value = int(input(input_text))
+            value = float(input(input_text))
         except ValueError:
             print('Entered value is not a number. Please, try again.')
             continue
@@ -10,9 +10,21 @@ def validate_input_is_number(input_text):
     return value
 
 
+def validate_input_is_integer_number(input_text):
+    while True:
+        try:
+            value = int(input(input_text))
+        except ValueError:
+            print('Entered value is not an integer number. Please, try again.')
+            continue
+        else:
+            break
+    return value
+
+
 def validate_input_is_not_zero(input_text):
     while True:
-        value = validate_input_is_number(input_text)
+        value = validate_input_is_float_number(input_text)
         if value == 0:
             print('Entered value cannot be = 0. Please, try again.')
             continue
@@ -23,7 +35,7 @@ def validate_input_is_not_zero(input_text):
 
 def validate_input_is_positive(input_text):
     while True:
-        value = validate_input_is_number(input_text)
+        value = validate_input_is_integer_number(input_text)
         if value <= 0:
             print('Entered value has to be > 0. Please, try again.')
             continue
