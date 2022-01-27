@@ -10,6 +10,17 @@ def validate_input_is_number(input_text):
     return value
 
 
+def validate_input_is_not_zero(input_text):
+    while True:
+        value = validate_input_is_number(input_text)
+        if value == 0:
+            print('Entered value cannot be = 0. Please, try again.')
+            continue
+        else:
+            break
+    return value
+
+
 def validate_input_is_positive(input_text):
     while True:
         value = validate_input_is_number(input_text)
