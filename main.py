@@ -3,6 +3,7 @@ import task2_sum_numbers
 import task3_sort_list
 import task4_leap_year
 import task5_even_number
+import task7_solve_function
 from task6_solve_quadratic_equation import QuadraticEquation
 
 # Task 1:
@@ -41,3 +42,13 @@ task5_even_number.check_even_number()
 
 equation_my = QuadraticEquation()
 equation_my.print_roots()
+
+
+# Task 7:
+# Дана следующая функция y=f(x):
+# y = 2x – 10, если x > 0
+# y = 0, если x = 0
+# y = 2 * |x| – 1, если x < 0
+# Найти значение функции по x, который вводиться с клавиатуры
+
+task7_solve_function.solve_function_by_x()

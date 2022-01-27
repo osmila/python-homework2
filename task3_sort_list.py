@@ -12,7 +12,7 @@ def get_list():
     list_my = []
     list_length = get_list_length()
     while len(list_my) < list_length:
-        item = validate_input_console.validate_input_is_number(LIST_ITEM_TEXT)
+        item = validate_input_console.validate_input_is_float_number(LIST_ITEM_TEXT)
         list_my.append(item)
     return list_my
 
